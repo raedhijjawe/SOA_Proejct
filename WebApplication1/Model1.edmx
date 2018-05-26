@@ -4,7 +4,23 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SOAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SOAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SOA.dbo.CustomerCharges' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CustomerCharges">
+          <Key>
+            <PropertyRef Name="msisdn" />
+            <PropertyRef Name="PACKAGE_Code" />
+          </Key>
+          <Property Name="msisdn" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="REGION" Type="nchar" MaxLength="10" />
+          <Property Name="JAWWAL_MAIN_CHARGE" Type="real" />
+          <Property Name="fraction" Type="real" />
+          <Property Name="WATANIYA_MAIN_CHARGE" Type="real" />
+          <Property Name="ONNET_TERMINATING" Type="real" />
+          <Property Name="ISRAEL_MAIN_CHARGE" Type="real" />
+          <Property Name="PACKAGE_Code" Type="int" Nullable="false" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'SOA.dbo.Customers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Customers">
@@ -18,6 +34,18 @@ warning 6002: The table/view 'SOA.dbo.Customers' does not have a primary key def
           <Property Name="BonusBalance" Type="real" />
         </EntityType>
         <EntityContainer Name="SOAModelStoreContainer">
+          <EntitySet Name="CustomerCharges" EntityType="Self.CustomerCharges" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [CustomerCharges].[msisdn] AS [msisdn], 
+    [CustomerCharges].[REGION] AS [REGION], 
+    [CustomerCharges].[JAWWAL_MAIN_CHARGE] AS [JAWWAL_MAIN_CHARGE], 
+    [CustomerCharges].[fraction] AS [fraction], 
+    [CustomerCharges].[WATANIYA_MAIN_CHARGE] AS [WATANIYA_MAIN_CHARGE], 
+    [CustomerCharges].[ONNET_TERMINATING] AS [ONNET_TERMINATING], 
+    [CustomerCharges].[ISRAEL_MAIN_CHARGE] AS [ISRAEL_MAIN_CHARGE], 
+    [CustomerCharges].[PACKAGE_Code] AS [PACKAGE_Code]
+    FROM [dbo].[CustomerCharges] AS [CustomerCharges]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="Customers" EntityType="Self.Customers" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Customers].[msisdn] AS [msisdn], 
@@ -27,8 +55,7 @@ warning 6002: The table/view 'SOA.dbo.Customers' does not have a primary key def
     FROM [dbo].[Customers] AS [Customers]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SOAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -44,7 +71,22 @@ warning 6002: The table/view 'SOA.dbo.Customers' does not have a primary key def
         </EntityType>
         <EntityContainer Name="SOAEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Customers" EntityType="Self.Customer" />
+          <EntitySet Name="CustomerCharges" EntityType="SOAModel.CustomerCharge" />
         </EntityContainer>
+        <EntityType Name="CustomerCharge">
+          <Key>
+            <PropertyRef Name="msisdn" />
+            <PropertyRef Name="PACKAGE_Code" />
+          </Key>
+          <Property Name="msisdn" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="REGION" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="JAWWAL_MAIN_CHARGE" Type="Single" />
+          <Property Name="fraction" Type="Single" />
+          <Property Name="WATANIYA_MAIN_CHARGE" Type="Single" />
+          <Property Name="ONNET_TERMINATING" Type="Single" />
+          <Property Name="ISRAEL_MAIN_CHARGE" Type="Single" />
+          <Property Name="PACKAGE_Code" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -58,6 +100,20 @@ warning 6002: The table/view 'SOA.dbo.Customers' does not have a primary key def
                 <ScalarProperty Name="Balance" ColumnName="Balance" />
                 <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
                 <ScalarProperty Name="BonusBalance" ColumnName="BonusBalance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerCharges">
+            <EntityTypeMapping TypeName="SOAModel.CustomerCharge">
+              <MappingFragment StoreEntitySet="CustomerCharges">
+                <ScalarProperty Name="PACKAGE_Code" ColumnName="PACKAGE_Code" />
+                <ScalarProperty Name="ISRAEL_MAIN_CHARGE" ColumnName="ISRAEL_MAIN_CHARGE" />
+                <ScalarProperty Name="ONNET_TERMINATING" ColumnName="ONNET_TERMINATING" />
+                <ScalarProperty Name="WATANIYA_MAIN_CHARGE" ColumnName="WATANIYA_MAIN_CHARGE" />
+                <ScalarProperty Name="fraction" ColumnName="fraction" />
+                <ScalarProperty Name="JAWWAL_MAIN_CHARGE" ColumnName="JAWWAL_MAIN_CHARGE" />
+                <ScalarProperty Name="REGION" ColumnName="REGION" />
+                <ScalarProperty Name="msisdn" ColumnName="msisdn" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

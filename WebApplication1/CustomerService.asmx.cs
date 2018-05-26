@@ -46,7 +46,7 @@ namespace WebApplication1
                 {
                     var customer = context.Customers.FirstOrDefault(x => x.msisdn == endUserIdentifier);
                     var customerBalance = customer.Balance;
-                    if ((amount + customerBalance) > 2000)
+                    if ((amount + customerBalance) < 2000)
                     {
                         customer.Balance = customerBalance + amount;
                         context.SaveChanges();
@@ -65,5 +65,32 @@ namespace WebApplication1
 
         }
 
+        [WebMethod]
+        public string BonusRefund(float amount, string endUserIdentifier, string billingText, string TransactionID, string externalData1, string externalData2, string receivedTime, string serviceIdentifier, string NAI, string currency, string account)
+        {
+            try
+            {
+                using (var context = new SOAEntities())
+                {
+                    var customer = context.Customers.FirstOrDefault(x => x.msisdn == endUserIdentifier);
+                    var customerBalance = customer.BonusBalance;
+                    if ((amount + customerBalance) < 2000)
+                    {
+                        customer.BonusBalance = customerBalance + amount;
+                        context.SaveChanges();
+                        return "resp>0</resp>respMessage>Customer refunded Successfuly</respMessage>";
+                    }
+                    else
+                    {
+                        return "resp>-1</resp>respMessage>Customer has exceeded the balance limit</respMessage>";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"resp>-1</resp>respMessage>{ex.Message}</respMessage>";
+            }
+
+        }
     }
 }
