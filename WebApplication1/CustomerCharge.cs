@@ -11,7 +11,9 @@ namespace WebApplication1
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract]
     public partial class CustomerCharge
     {
         public string msisdn { get; set; }

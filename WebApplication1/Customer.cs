@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Runtime.Serialization;
+
 namespace WebApplication1
 {
     using System;
     using System.Collections.Generic;
-    
+    [DataContract]
     public partial class Customer
     {
         public string msisdn { get; set; }
