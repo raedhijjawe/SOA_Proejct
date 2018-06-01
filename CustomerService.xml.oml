@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OCR VER="2.0" MAXID="40">
+  <PROGRAMS>
+    <PROGRAM OID="Program1" NAME="SOAP_Charge" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter3" NAME="amount" DESC="" TYPE="xsd:decimal" />
+        <PARAM OID="InboxParameter4" NAME="endUserIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter5" NAME="billingText" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter6" NAME="TransactionID" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter7" NAME="externalData1" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter8" NAME="externalData2" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter9" NAME="receivedTime" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter10" NAME="serviceIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter11" NAME="NAI" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter12" NAME="currency" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter13" NAME="account" DESC="" TYPE="xsd:string" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter18" NAME="ChargeResult" DESC="" TYPE="xsd:string" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod2" NAME="SOAP_Charge_INVOKE" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.router.CT_INVOKE">
+          <INBOX>
+            <PARAM OID="InboxParameter14" NAME="message" DESC="" TYPE="XML">&lt;soapEnv:Envelope xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapEnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdns0="http://tempuri.org/" xmlns:bns="http://tempuri.org/"&gt;
+&lt;soapEnv:Body&gt;
+    &lt;bns:Charge soapEnv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+  &lt;bns:amount xsi:type="xsd:decimal"&gt;%amount%&lt;/bns:amount&gt;
+  &lt;bns:endUserIdentifier xsi:type="xsd:string"&gt;%endUserIdentifier%&lt;/bns:endUserIdentifier&gt;
+  &lt;bns:billingText xsi:type="xsd:string"&gt;%billingText%&lt;/bns:billingText&gt;
+  &lt;bns:TransactionID xsi:type="xsd:string"&gt;%TransactionID%&lt;/bns:TransactionID&gt;
+  &lt;bns:externalData1 xsi:type="xsd:string"&gt;%externalData1%&lt;/bns:externalData1&gt;
+  &lt;bns:externalData2 xsi:type="xsd:string"&gt;%externalData2%&lt;/bns:externalData2&gt;
+  &lt;bns:receivedTime xsi:type="xsd:string"&gt;%receivedTime%&lt;/bns:receivedTime&gt;
+  &lt;bns:serviceIdentifier xsi:type="xsd:string"&gt;%serviceIdentifier%&lt;/bns:serviceIdentifier&gt;
+  &lt;bns:NAI xsi:type="xsd:string"&gt;%NAI%&lt;/bns:NAI&gt;
+  &lt;bns:currency xsi:type="xsd:string"&gt;%currency%&lt;/bns:currency&gt;
+  &lt;bns:account xsi:type="xsd:string"&gt;%account%&lt;/bns:account&gt;
+&lt;/bns:Charge&gt;
+&lt;/soapEnv:Body&gt;&lt;/soapEnv:Envelope&gt;</PARAM>
+            <PARAM OID="InboxParameter15" NAME="destination" DESC="" TYPE="URI">http://localhost:18474/CustomerService.asmx</PARAM>
+            <PARAM OID="InboxParameter16" NAME="SOAPaction" DESC="" TYPE="String">http://tempuri.org/Charge</PARAM>
+            <PARAM OID="InboxParameter17" NAME="timeout" DESC="" TYPE="Integer Advanced" />
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter19" NAME="error" DESC="" TYPE="String" />
+            <PARAM OID="OutboxParameter20" NAME="message" DESC="" TYPE="Text" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+    <PROGRAM OID="Program21" NAME="SOAP_Refund" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter23" NAME="amount" DESC="" TYPE="xsd:decimal" />
+        <PARAM OID="InboxParameter24" NAME="endUserIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter25" NAME="billingText" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter26" NAME="TransactionID" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter27" NAME="externalData1" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter28" NAME="externalData2" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter29" NAME="receivedTime" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter30" NAME="serviceIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter31" NAME="NAI" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter32" NAME="currency" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter33" NAME="account" DESC="" TYPE="xsd:string" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter38" NAME="RefundResult" DESC="" TYPE="xsd:string" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod22" NAME="SOAP_Refund_INVOKE" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.router.CT_INVOKE">
+          <INBOX>
+            <PARAM OID="InboxParameter34" NAME="message" DESC="" TYPE="XML">&lt;soapEnv:Envelope xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapEnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdns0="http://tempuri.org/" xmlns:bns="http://tempuri.org/"&gt;
+&lt;soapEnv:Body&gt;
+    &lt;bns:Refund soapEnv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+  &lt;bns:amount xsi:type="xsd:decimal"&gt;%amount%&lt;/bns:amount&gt;
+  &lt;bns:endUserIdentifier xsi:type="xsd:string"&gt;%endUserIdentifier%&lt;/bns:endUserIdentifier&gt;
+  &lt;bns:billingText xsi:type="xsd:string"&gt;%billingText%&lt;/bns:billingText&gt;
+  &lt;bns:TransactionID xsi:type="xsd:string"&gt;%TransactionID%&lt;/bns:TransactionID&gt;
+  &lt;bns:externalData1 xsi:type="xsd:string"&gt;%externalData1%&lt;/bns:externalData1&gt;
+  &lt;bns:externalData2 xsi:type="xsd:string"&gt;%externalData2%&lt;/bns:externalData2&gt;
+  &lt;bns:receivedTime xsi:type="xsd:string"&gt;%receivedTime%&lt;/bns:receivedTime&gt;
+  &lt;bns:serviceIdentifier xsi:type="xsd:string"&gt;%serviceIdentifier%&lt;/bns:serviceIdentifier&gt;
+  &lt;bns:NAI xsi:type="xsd:string"&gt;%NAI%&lt;/bns:NAI&gt;
+  &lt;bns:currency xsi:type="xsd:string"&gt;%currency%&lt;/bns:currency&gt;
+  &lt;bns:account xsi:type="xsd:string"&gt;%account%&lt;/bns:account&gt;
+&lt;/bns:Refund&gt;
+&lt;/soapEnv:Body&gt;&lt;/soapEnv:Envelope&gt;</PARAM>
+            <PARAM OID="InboxParameter35" NAME="destination" DESC="" TYPE="URI">http://localhost:18474/CustomerService.asmx</PARAM>
+            <PARAM OID="InboxParameter36" NAME="SOAPaction" DESC="" TYPE="String">http://tempuri.org/Refund</PARAM>
+            <PARAM OID="InboxParameter37" NAME="timeout" DESC="" TYPE="Integer Advanced" />
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter39" NAME="error" DESC="" TYPE="String" />
+            <PARAM OID="OutboxParameter40" NAME="message" DESC="" TYPE="Text" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+  </PROGRAMS>
+</OCR>
+
