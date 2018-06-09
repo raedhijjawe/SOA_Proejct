@@ -1,5 +1,694 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<OCR VER="2.0" MAXID="40">
+<OCR VER="2.0" MAXID="1184">
+  <PROCS>
+    <PROC OID="Process678" NAME="Test_GetChurnScore" DESC="Automatically generated test process for GetChurnScore" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" PUBLISHED="true" SUBPROC="false" FLOWCONTROL="false">
+      <INBOX>
+        <PARAM OID="InboxParameter683" NAME="REGION" DESC="" TYPE="string">"GZ"</PARAM>
+        <PARAM OID="InboxParameter684" NAME="JAWWAL_MAIN_CHARGE" DESC="" TYPE="float">5</PARAM>
+        <PARAM OID="InboxParameter685" NAME="WATANIYA_MAIN_CHARGE" DESC="" TYPE="float">1.05</PARAM>
+        <PARAM OID="InboxParameter686" NAME="ONNET_TERMINATING" DESC="" TYPE="float" />
+        <PARAM OID="InboxParameter687" NAME="ISRAEL_MAIN_CHARGE" DESC="" TYPE="float">3.025</PARAM>
+        <PARAM OID="InboxParameter688" NAME="PACKAGE_Code" DESC="" TYPE="int">3</PARAM>
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter689" NAME="churnscore" DESC="" TYPE="float" />
+      </OUTBOX>
+      <TASKS>
+        <ACTIVITY OID="Activity690" NAME="GetChurnScore" DESC="" ACT="" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program197" />
+      </TASKS>
+      <DATAFLOW>
+        <BIND OID="Binding701" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter683" DESTPID="InboxParameter198" DESTTID="Activity690" ACTION="0" />
+        <BIND OID="Binding704" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter684" DESTPID="InboxParameter199" DESTTID="Activity690" ACTION="0" />
+        <BIND OID="Binding707" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter685" DESTPID="InboxParameter200" DESTTID="Activity690" ACTION="0" />
+        <BIND OID="Binding710" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter686" DESTPID="InboxParameter201" DESTTID="Activity690" ACTION="0" />
+        <BIND OID="Binding713" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter687" DESTPID="InboxParameter203" DESTTID="Activity690" ACTION="0" />
+        <BIND OID="Binding716" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter688" DESTPID="InboxParameter205" DESTTID="Activity690" ACTION="0" />
+        <BIND OID="Binding719" SRCTYP="0" DESTTYP="3" SRCPID="OutboxParameter206" DESTPID="OutboxParameter689" SRCTID="Activity690" ACTION="0" />
+      </DATAFLOW>
+      <VIEWS>
+        <VIEW OID="View679" NAME="ControlFlow" DESC="" VTYPE="0">
+          <ARROWS />
+          <BOXES>
+            <RBOX OID="RefBox692" X="0.0" Y="50.0" DX="0.0" DY="0.0" REF="Activity690" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+        <VIEW OID="View680" NAME="DataFlow" DESC="" VTYPE="1">
+          <ARROWS>
+            <ARROW OID="Arrow702" SOURCE="RefBox700" DESTINATION="RefBox693" REF="Binding701" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow705" SOURCE="RefBox703" DESTINATION="RefBox694" REF="Binding704" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow708" SOURCE="RefBox706" DESTINATION="RefBox695" REF="Binding707" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow711" SOURCE="RefBox709" DESTINATION="RefBox696" REF="Binding710" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow714" SOURCE="RefBox712" DESTINATION="RefBox697" REF="Binding713" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow717" SOURCE="RefBox715" DESTINATION="RefBox698" REF="Binding716" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow720" SOURCE="RefBox699" DESTINATION="RefBox718" REF="Binding719" REFTYPE="1" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox681" X="250.0" Y="0.0" DX="0.0" DY="0.0" REF="Process678" REFTYPE="5">
+              <BOXES>
+                <RBOX OID="RefBox700" X="250.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter683" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox703" X="300.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter684" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox706" X="350.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter685" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox709" X="400.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter686" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox712" X="450.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter687" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox715" X="500.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter688" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox682" X="450.0" Y="700.0" DX="0.0" DY="0.0" REF="Process678" REFTYPE="6">
+              <BOXES>
+                <RBOX OID="RefBox718" X="450.0" Y="640.0" DX="0.0" DY="0.0" REF="OutboxParameter689" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox691" X="350.0" Y="350.0" DX="0.0" DY="0.0" REF="Activity690" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox693" X="200.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter198" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox694" X="250.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter199" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox695" X="300.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter200" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox696" X="350.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter201" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox697" X="400.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter203" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox698" X="450.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter205" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox699" X="325.0" Y="410.0" DX="0.0" DY="0.0" REF="OutboxParameter206" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox721" X="463.0" Y="406.0" DX="0.0" DY="0.0" REF="OutboxParameter225" REFTYPE="9">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+      </VIEWS>
+    </PROC>
+    <PROC OID="Process899" NAME="Test_churnparser" DESC="Automatically generated test process for churnparser" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" PUBLISHED="true" SUBPROC="false" FLOWCONTROL="false">
+      <INBOX>
+        <PARAM OID="InboxParameter904" NAME="page" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter905" NAME="result" DESC="" TYPE="String" />
+        <PARAM OID="OutboxParameter906" NAME="count" DESC="" TYPE="String" />
+      </OUTBOX>
+      <TASKS>
+        <ACTIVITY OID="Activity907" NAME="churnparser" DESC="" ACT="" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program729" />
+      </TASKS>
+      <DATAFLOW>
+        <BIND OID="Binding914" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter904" DESTPID="InboxParameter735" DESTTID="Activity907" ACTION="0" />
+        <BIND OID="Binding917" SRCTYP="0" DESTTYP="3" SRCPID="OutboxParameter736" DESTPID="OutboxParameter905" SRCTID="Activity907" ACTION="0" />
+        <BIND OID="Binding920" SRCTYP="0" DESTTYP="3" SRCPID="OutboxParameter773" DESTPID="OutboxParameter906" SRCTID="Activity907" ACTION="0" />
+      </DATAFLOW>
+      <VIEWS>
+        <VIEW OID="View900" NAME="ControlFlow" DESC="" VTYPE="0">
+          <ARROWS />
+          <BOXES>
+            <RBOX OID="RefBox909" X="0.0" Y="50.0" DX="0.0" DY="0.0" REF="Activity907" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+        <VIEW OID="View901" NAME="DataFlow" DESC="" VTYPE="1">
+          <ARROWS>
+            <ARROW OID="Arrow915" SOURCE="RefBox913" DESTINATION="RefBox910" REF="Binding914" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow918" SOURCE="RefBox911" DESTINATION="RefBox916" REF="Binding917" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow921" SOURCE="RefBox912" DESTINATION="RefBox919" REF="Binding920" REFTYPE="1" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox902" X="250.0" Y="0.0" DX="0.0" DY="0.0" REF="Process899" REFTYPE="5">
+              <BOXES>
+                <RBOX OID="RefBox913" X="250.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter904" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox903" X="450.0" Y="700.0" DX="0.0" DY="0.0" REF="Process899" REFTYPE="6">
+              <BOXES>
+                <RBOX OID="RefBox916" X="450.0" Y="640.0" DX="0.0" DY="0.0" REF="OutboxParameter905" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox919" X="500.0" Y="640.0" DX="0.0" DY="0.0" REF="OutboxParameter906" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox908" X="350.0" Y="350.0" DX="0.0" DY="0.0" REF="Activity907" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox910" X="325.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter735" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox911" X="300.0" Y="410.0" DX="0.0" DY="0.0" REF="OutboxParameter736" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox912" X="350.0" Y="410.0" DX="0.0" DY="0.0" REF="OutboxParameter773" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+      </VIEWS>
+    </PROC>
+    <PROC OID="Process922" NAME="antichurn" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" PUBLISHED="true" SUBPROC="false" FLOWCONTROL="false">
+      <INBOX>
+        <PARAM OID="InboxParameter929" NAME="promotionrate" DESC="" TYPE="xsd:decimal">20</PARAM>
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter989" NAME="CreateBusnissInteractionResult" DESC="" TYPE="xsd:string" />
+      </OUTBOX>
+      <CONSTS>
+        <PARAM OID="Constant1133" NAME="endUserIdentifier" DESC="" TYPE="xsd:string">1</PARAM>
+        <PARAM OID="Constant1137" NAME="amount" DESC="" TYPE="xsd:decimal">20</PARAM>
+        <PARAM OID="Constant1141" NAME="bonusamount" DESC="" TYPE="xsd:decimal">10</PARAM>
+        <PARAM OID="Constant1145" NAME="endUserIdentifier2" DESC="" TYPE="xsd:string">1</PARAM>
+      </CONSTS>
+      <TASKS>
+        <ACTIVITY OID="Activity933" NAME="GetChurnScore" DESC="" ACT="" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program197" />
+        <ACTIVITY OID="Activity944" NAME="SOAP_BonusRefund" DESC="" ACT="Finished(GetChurnScore)" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program41" />
+        <ACTIVITY OID="Activity963" NAME="SOAP_Refund" DESC="" ACT="Finished(GetChurnScore)" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program21" />
+        <ACTIVITY OID="Activity982" NAME="SOAP_CreateBusnissInteraction" DESC="" ACT="Finished(SOAP_Refund) AND Finished(SOAP_BonusRefund)" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="ws.C.Users.raed.hijjawe.Desktop.CRMActivityService.xml.Program1" />
+      </TASKS>
+      <DATAFLOW>
+        <BIND OID="Binding991" SRCTYP="0" DESTTYP="3" SRCPID="ws.C.Users.raed.hijjawe.Desktop.CRMActivityService.xml.OutboxParameter9" DESTPID="OutboxParameter989" SRCTID="Activity982" ACTION="0" />
+        <BIND OID="Binding1135" SRCTYP="2" DESTTYP="0" SRCPID="Constant1133" DESTPID="InboxParameter24" DESTTID="Activity963" ACTION="0" />
+        <BIND OID="Binding1139" SRCTYP="2" DESTTYP="0" SRCPID="Constant1137" DESTPID="InboxParameter586" DESTTID="Activity963" ACTION="0" />
+        <BIND OID="Binding1143" SRCTYP="2" DESTTYP="0" SRCPID="Constant1141" DESTPID="InboxParameter43" DESTTID="Activity944" ACTION="0" />
+        <BIND OID="Binding1147" SRCTYP="2" DESTTYP="0" SRCPID="Constant1145" DESTPID="InboxParameter44" DESTTID="Activity944" ACTION="0" />
+      </DATAFLOW>
+      <VIEWS>
+        <VIEW OID="View923" NAME="ControlFlow" DESC="" VTYPE="0">
+          <ARROWS>
+            <ARROW OID="Arrow993" SOURCE="RefBox935" DESTINATION="RefBox946" REFTYPE="4" ROUTE="2" />
+            <ARROW OID="Arrow994" SOURCE="RefBox935" DESTINATION="RefBox965" REFTYPE="4" ROUTE="2" />
+            <ARROW OID="Arrow995" SOURCE="RefBox965" DESTINATION="RefBox984" REFTYPE="4" ROUTE="2" />
+            <ARROW OID="Arrow996" SOURCE="RefBox946" DESTINATION="RefBox984" REFTYPE="4" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox935" X="537.0" Y="173.0" DX="0.0" DY="0.0" REF="Activity933" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox946" X="354.0" Y="283.0" DX="0.0" DY="0.0" REF="Activity944" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox965" X="718.0" Y="281.0" DX="0.0" DY="0.0" REF="Activity963" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox984" X="527.0" Y="441.0" DX="0.0" DY="0.0" REF="Activity982" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+        <VIEW OID="View924" NAME="DataFlow" DESC="" VTYPE="1">
+          <ARROWS>
+            <ARROW OID="Arrow992" SOURCE="RefBox987" DESTINATION="RefBox990" REF="Binding991" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1136" SOURCE="RefBox1134" DESTINATION="RefBox966" REF="Binding1135" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1140" SOURCE="RefBox1138" DESTINATION="RefBox976" REF="Binding1139" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1144" SOURCE="RefBox1142" DESTINATION="RefBox947" REF="Binding1143" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1148" SOURCE="RefBox1146" DESTINATION="RefBox948" REF="Binding1147" REFTYPE="1" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox925" X="496.0" Y="2.0" DX="0.0" DY="0.0" REF="Process922" REFTYPE="5">
+              <BOXES>
+                <RBOX OID="RefBox931" X="643.0" Y="48.0" DX="0.0" DY="0.0" REF="InboxParameter929" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox926" X="543.0" Y="705.0" DX="0.0" DY="0.0" REF="Process922" REFTYPE="6">
+              <BOXES>
+                <RBOX OID="RefBox990" X="446.0" Y="667.0" DX="0.0" DY="0.0" REF="OutboxParameter989" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox934" X="847.0" Y="234.0" DX="0.0" DY="0.0" REF="Activity933" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox936" X="664.0" Y="221.0" DX="0.0" DY="0.0" REF="InboxParameter198" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox937" X="564.0" Y="167.0" DX="0.0" DY="0.0" REF="InboxParameter199" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox938" X="778.0" Y="162.0" DX="0.0" DY="0.0" REF="InboxParameter200" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox939" X="665.0" Y="120.0" DX="0.0" DY="0.0" REF="InboxParameter201" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox940" X="1139.0" Y="150.0" DX="0.0" DY="0.0" REF="InboxParameter203" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox941" X="993.0" Y="108.0" DX="0.0" DY="0.0" REF="InboxParameter205" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox942" X="922.0" Y="283.0" DX="0.0" DY="0.0" REF="OutboxParameter206" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox943" X="1035.0" Y="290.0" DX="0.0" DY="0.0" REF="OutboxParameter225" REFTYPE="9">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox945" X="1180.0" Y="477.0" DX="0.0" DY="0.0" REF="Activity944" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox947" X="702.0" Y="388.0" DX="0.0" DY="0.0" REF="InboxParameter43" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox948" X="837.0" Y="378.0" DX="0.0" DY="0.0" REF="InboxParameter44" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox949" X="1005.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter45" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox950" X="1055.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter46" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox951" X="1105.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter47" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox952" X="1155.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter48" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox953" X="1205.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter49" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox954" X="1255.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter50" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox955" X="1305.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter51" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox956" X="1355.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter52" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox957" X="1405.0" Y="427.0" DX="0.0" DY="0.0" REF="InboxParameter53" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox958" X="1155.0" Y="537.0" DX="0.0" DY="0.0" REF="OutboxParameter58" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox964" X="198.0" Y="468.0" DX="0.0" DY="0.0" REF="Activity963" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox966" X="-1.0" Y="372.0" DX="0.0" DY="0.0" REF="InboxParameter24" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox967" X="-27.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter25" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox968" X="23.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter26" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox969" X="73.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter27" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox970" X="123.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter28" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox971" X="173.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter29" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox972" X="223.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter30" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox973" X="273.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter31" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox974" X="323.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter32" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox975" X="373.0" Y="418.0" DX="0.0" DY="0.0" REF="InboxParameter33" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox976" X="378.0" Y="343.0" DX="0.0" DY="0.0" REF="InboxParameter586" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox977" X="173.0" Y="528.0" DX="0.0" DY="0.0" REF="OutboxParameter38" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox983" X="664.0" Y="572.0" DX="0.0" DY="0.0" REF="Activity982" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox985" X="614.0" Y="522.0" DX="0.0" DY="0.0" REF="ws.C.Users.raed.hijjawe.Desktop.CRMActivityService.xml.InboxParameter3" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox986" X="813.0" Y="518.0" DX="0.0" DY="0.0" REF="ws.C.Users.raed.hijjawe.Desktop.CRMActivityService.xml.InboxParameter4" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox987" X="598.0" Y="623.0" DX="0.0" DY="0.0" REF="ws.C.Users.raed.hijjawe.Desktop.CRMActivityService.xml.OutboxParameter9" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox988" X="907.0" Y="632.0" DX="0.0" DY="0.0" REF="ws.C.Users.raed.hijjawe.Desktop.CRMActivityService.xml.OutboxParameter11" REFTYPE="9">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox1134" X="-2.0" Y="319.0" DX="0.0" DY="0.0" REF="Constant1133" REFTYPE="7">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox1138" X="378.0" Y="293.0" DX="0.0" DY="0.0" REF="Constant1137" REFTYPE="7">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox1142" X="667.0" Y="339.0" DX="0.0" DY="0.0" REF="Constant1141" REFTYPE="7">
+              <BOXES />
+            </RBOX>
+            <RBOX OID="RefBox1146" X="828.0" Y="328.0" DX="0.0" DY="0.0" REF="Constant1145" REFTYPE="7">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+      </VIEWS>
+    </PROC>
+    <PROC OID="Process997" NAME="Test_SOAP_Refund" DESC="Automatically generated test process for SOAP_Refund" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" PUBLISHED="true" SUBPROC="false" FLOWCONTROL="false">
+      <INBOX>
+        <PARAM OID="InboxParameter1002" NAME="endUserIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1003" NAME="billingText" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1004" NAME="TransactionID" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1005" NAME="externalData1" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1006" NAME="externalData2" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1007" NAME="receivedTime" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1008" NAME="serviceIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1009" NAME="NAI" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1010" NAME="currency" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1011" NAME="account" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1012" NAME="amount" DESC="" TYPE="xsd:decimal" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter1013" NAME="RefundResult" DESC="" TYPE="xsd:string" />
+      </OUTBOX>
+      <TASKS>
+        <ACTIVITY OID="Activity1014" NAME="SOAP_Refund" DESC="" ACT="" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program21" />
+      </TASKS>
+      <DATAFLOW>
+        <BIND OID="Binding1030" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1002" DESTPID="InboxParameter24" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1033" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1003" DESTPID="InboxParameter25" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1036" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1004" DESTPID="InboxParameter26" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1039" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1005" DESTPID="InboxParameter27" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1042" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1006" DESTPID="InboxParameter28" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1045" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1007" DESTPID="InboxParameter29" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1048" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1008" DESTPID="InboxParameter30" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1051" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1009" DESTPID="InboxParameter31" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1054" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1010" DESTPID="InboxParameter32" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1057" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1011" DESTPID="InboxParameter33" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1060" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1012" DESTPID="InboxParameter586" DESTTID="Activity1014" ACTION="0" />
+        <BIND OID="Binding1063" SRCTYP="0" DESTTYP="3" SRCPID="OutboxParameter38" DESTPID="OutboxParameter1013" SRCTID="Activity1014" ACTION="0" />
+      </DATAFLOW>
+      <VIEWS>
+        <VIEW OID="View998" NAME="ControlFlow" DESC="" VTYPE="0">
+          <ARROWS />
+          <BOXES>
+            <RBOX OID="RefBox1016" X="0.0" Y="50.0" DX="0.0" DY="0.0" REF="Activity1014" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+        <VIEW OID="View999" NAME="DataFlow" DESC="" VTYPE="1">
+          <ARROWS>
+            <ARROW OID="Arrow1031" SOURCE="RefBox1029" DESTINATION="RefBox1017" REF="Binding1030" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1034" SOURCE="RefBox1032" DESTINATION="RefBox1018" REF="Binding1033" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1037" SOURCE="RefBox1035" DESTINATION="RefBox1019" REF="Binding1036" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1040" SOURCE="RefBox1038" DESTINATION="RefBox1020" REF="Binding1039" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1043" SOURCE="RefBox1041" DESTINATION="RefBox1021" REF="Binding1042" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1046" SOURCE="RefBox1044" DESTINATION="RefBox1022" REF="Binding1045" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1049" SOURCE="RefBox1047" DESTINATION="RefBox1023" REF="Binding1048" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1052" SOURCE="RefBox1050" DESTINATION="RefBox1024" REF="Binding1051" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1055" SOURCE="RefBox1053" DESTINATION="RefBox1025" REF="Binding1054" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1058" SOURCE="RefBox1056" DESTINATION="RefBox1026" REF="Binding1057" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1061" SOURCE="RefBox1059" DESTINATION="RefBox1027" REF="Binding1060" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1064" SOURCE="RefBox1028" DESTINATION="RefBox1062" REF="Binding1063" REFTYPE="1" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox1000" X="250.0" Y="0.0" DX="0.0" DY="0.0" REF="Process997" REFTYPE="5">
+              <BOXES>
+                <RBOX OID="RefBox1029" X="250.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1002" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1032" X="300.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1003" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1035" X="350.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1004" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1038" X="400.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1005" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1041" X="450.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1006" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1044" X="500.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1007" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1047" X="550.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1008" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1050" X="600.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1009" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1053" X="650.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1010" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1056" X="700.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1011" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1059" X="750.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1012" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox1001" X="450.0" Y="700.0" DX="0.0" DY="0.0" REF="Process997" REFTYPE="6">
+              <BOXES>
+                <RBOX OID="RefBox1062" X="450.0" Y="640.0" DX="0.0" DY="0.0" REF="OutboxParameter1013" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox1015" X="350.0" Y="350.0" DX="0.0" DY="0.0" REF="Activity1014" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox1017" X="75.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter24" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1018" X="125.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter25" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1019" X="175.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter26" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1020" X="225.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter27" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1021" X="275.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter28" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1022" X="325.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter29" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1023" X="375.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter30" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1024" X="425.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter31" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1025" X="475.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter32" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1026" X="525.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter33" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1027" X="575.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter586" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1028" X="325.0" Y="410.0" DX="0.0" DY="0.0" REF="OutboxParameter38" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+      </VIEWS>
+    </PROC>
+    <PROC OID="Process1065" NAME="Test_SOAP_BonusRefund" DESC="Automatically generated test process for SOAP_BonusRefund" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" PUBLISHED="true" SUBPROC="false" FLOWCONTROL="false">
+      <INBOX>
+        <PARAM OID="InboxParameter1070" NAME="amount" DESC="" TYPE="xsd:decimal" />
+        <PARAM OID="InboxParameter1071" NAME="endUserIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1072" NAME="billingText" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1073" NAME="TransactionID" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1074" NAME="externalData1" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1075" NAME="externalData2" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1076" NAME="receivedTime" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1077" NAME="serviceIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1078" NAME="NAI" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1079" NAME="currency" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter1080" NAME="account" DESC="" TYPE="xsd:string" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter1081" NAME="BonusRefundResult" DESC="" TYPE="xsd:string" />
+      </OUTBOX>
+      <TASKS>
+        <ACTIVITY OID="Activity1082" NAME="SOAP_BonusRefund" DESC="" ACT="" COND="TRUE" PRIORITY="0" DEP="4" SYNCH="0" FAILH="0" PROGRAMID="Program41" />
+      </TASKS>
+      <DATAFLOW>
+        <BIND OID="Binding1098" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1070" DESTPID="InboxParameter43" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1101" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1071" DESTPID="InboxParameter44" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1104" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1072" DESTPID="InboxParameter45" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1107" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1073" DESTPID="InboxParameter46" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1110" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1074" DESTPID="InboxParameter47" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1113" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1075" DESTPID="InboxParameter48" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1116" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1076" DESTPID="InboxParameter49" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1119" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1077" DESTPID="InboxParameter50" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1122" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1078" DESTPID="InboxParameter51" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1125" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1079" DESTPID="InboxParameter52" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1128" SRCTYP="3" DESTTYP="0" SRCPID="InboxParameter1080" DESTPID="InboxParameter53" DESTTID="Activity1082" ACTION="0" />
+        <BIND OID="Binding1131" SRCTYP="0" DESTTYP="3" SRCPID="OutboxParameter58" DESTPID="OutboxParameter1081" SRCTID="Activity1082" ACTION="0" />
+      </DATAFLOW>
+      <VIEWS>
+        <VIEW OID="View1066" NAME="ControlFlow" DESC="" VTYPE="0">
+          <ARROWS />
+          <BOXES>
+            <RBOX OID="RefBox1084" X="0.0" Y="50.0" DX="0.0" DY="0.0" REF="Activity1082" REFTYPE="0">
+              <BOXES />
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+        <VIEW OID="View1067" NAME="DataFlow" DESC="" VTYPE="1">
+          <ARROWS>
+            <ARROW OID="Arrow1099" SOURCE="RefBox1097" DESTINATION="RefBox1085" REF="Binding1098" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1102" SOURCE="RefBox1100" DESTINATION="RefBox1086" REF="Binding1101" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1105" SOURCE="RefBox1103" DESTINATION="RefBox1087" REF="Binding1104" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1108" SOURCE="RefBox1106" DESTINATION="RefBox1088" REF="Binding1107" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1111" SOURCE="RefBox1109" DESTINATION="RefBox1089" REF="Binding1110" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1114" SOURCE="RefBox1112" DESTINATION="RefBox1090" REF="Binding1113" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1117" SOURCE="RefBox1115" DESTINATION="RefBox1091" REF="Binding1116" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1120" SOURCE="RefBox1118" DESTINATION="RefBox1092" REF="Binding1119" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1123" SOURCE="RefBox1121" DESTINATION="RefBox1093" REF="Binding1122" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1126" SOURCE="RefBox1124" DESTINATION="RefBox1094" REF="Binding1125" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1129" SOURCE="RefBox1127" DESTINATION="RefBox1095" REF="Binding1128" REFTYPE="1" ROUTE="2" />
+            <ARROW OID="Arrow1132" SOURCE="RefBox1096" DESTINATION="RefBox1130" REF="Binding1131" REFTYPE="1" ROUTE="2" />
+          </ARROWS>
+          <BOXES>
+            <RBOX OID="RefBox1068" X="250.0" Y="0.0" DX="0.0" DY="0.0" REF="Process1065" REFTYPE="5">
+              <BOXES>
+                <RBOX OID="RefBox1097" X="250.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1070" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1100" X="300.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1071" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1103" X="350.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1072" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1106" X="400.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1073" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1109" X="450.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1074" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1112" X="500.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1075" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1115" X="550.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1076" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1118" X="600.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1077" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1121" X="650.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1078" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1124" X="700.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1079" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1127" X="750.0" Y="50.0" DX="0.0" DY="0.0" REF="InboxParameter1080" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox1069" X="450.0" Y="700.0" DX="0.0" DY="0.0" REF="Process1065" REFTYPE="6">
+              <BOXES>
+                <RBOX OID="RefBox1130" X="450.0" Y="640.0" DX="0.0" DY="0.0" REF="OutboxParameter1081" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+            <RBOX OID="RefBox1083" X="350.0" Y="350.0" DX="0.0" DY="0.0" REF="Activity1082" REFTYPE="0">
+              <BOXES>
+                <RBOX OID="RefBox1085" X="75.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter43" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1086" X="125.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter44" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1087" X="175.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter45" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1088" X="225.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter46" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1089" X="275.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter47" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1090" X="325.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter48" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1091" X="375.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter49" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1092" X="425.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter50" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1093" X="475.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter51" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1094" X="525.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter52" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1095" X="575.0" Y="300.0" DX="0.0" DY="0.0" REF="InboxParameter53" REFTYPE="3">
+                  <BOXES />
+                </RBOX>
+                <RBOX OID="RefBox1096" X="325.0" Y="410.0" DX="0.0" DY="0.0" REF="OutboxParameter58" REFTYPE="4">
+                  <BOXES />
+                </RBOX>
+              </BOXES>
+            </RBOX>
+          </BOXES>
+          <GROUPS />
+        </VIEW>
+      </VIEWS>
+    </PROC>
+  </PROCS>
   <PROGRAMS>
     <PROGRAM OID="Program1" NAME="SOAP_Charge" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
       <INBOX>
@@ -50,7 +739,6 @@
     </PROGRAM>
     <PROGRAM OID="Program21" NAME="SOAP_Refund" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
       <INBOX>
-        <PARAM OID="InboxParameter23" NAME="amount" DESC="" TYPE="xsd:decimal" />
         <PARAM OID="InboxParameter24" NAME="endUserIdentifier" DESC="" TYPE="xsd:string" />
         <PARAM OID="InboxParameter25" NAME="billingText" DESC="" TYPE="xsd:string" />
         <PARAM OID="InboxParameter26" NAME="TransactionID" DESC="" TYPE="xsd:string" />
@@ -61,6 +749,7 @@
         <PARAM OID="InboxParameter31" NAME="NAI" DESC="" TYPE="xsd:string" />
         <PARAM OID="InboxParameter32" NAME="currency" DESC="" TYPE="xsd:string" />
         <PARAM OID="InboxParameter33" NAME="account" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter586" NAME="amount" DESC="" TYPE="xsd:decimal" />
       </INBOX>
       <OUTBOX>
         <PARAM OID="OutboxParameter38" NAME="RefundResult" DESC="" TYPE="xsd:string" />
@@ -91,6 +780,120 @@
           <OUTBOX>
             <PARAM OID="OutboxParameter39" NAME="error" DESC="" TYPE="String" />
             <PARAM OID="OutboxParameter40" NAME="message" DESC="" TYPE="Text" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+    <PROGRAM OID="Program41" NAME="SOAP_BonusRefund" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter43" NAME="amount" DESC="" TYPE="xsd:decimal" />
+        <PARAM OID="InboxParameter44" NAME="endUserIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter45" NAME="billingText" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter46" NAME="TransactionID" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter47" NAME="externalData1" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter48" NAME="externalData2" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter49" NAME="receivedTime" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter50" NAME="serviceIdentifier" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter51" NAME="NAI" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter52" NAME="currency" DESC="" TYPE="xsd:string" />
+        <PARAM OID="InboxParameter53" NAME="account" DESC="" TYPE="xsd:string" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter58" NAME="BonusRefundResult" DESC="" TYPE="xsd:string" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod42" NAME="SOAP_BonusRefund_INVOKE" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.router.CT_INVOKE">
+          <INBOX>
+            <PARAM OID="InboxParameter54" NAME="message" DESC="" TYPE="XML">&lt;soapEnv:Envelope xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapEnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdns0="http://tempuri.org/" xmlns:bns="http://tempuri.org/"&gt;
+&lt;soapEnv:Body&gt;
+    &lt;bns:BonusRefund soapEnv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"&gt;
+  &lt;bns:amount xsi:type="xsd:decimal"&gt;%amount%&lt;/bns:amount&gt;
+  &lt;bns:endUserIdentifier xsi:type="xsd:string"&gt;%endUserIdentifier%&lt;/bns:endUserIdentifier&gt;
+  &lt;bns:billingText xsi:type="xsd:string"&gt;%billingText%&lt;/bns:billingText&gt;
+  &lt;bns:TransactionID xsi:type="xsd:string"&gt;%TransactionID%&lt;/bns:TransactionID&gt;
+  &lt;bns:externalData1 xsi:type="xsd:string"&gt;%externalData1%&lt;/bns:externalData1&gt;
+  &lt;bns:externalData2 xsi:type="xsd:string"&gt;%externalData2%&lt;/bns:externalData2&gt;
+  &lt;bns:receivedTime xsi:type="xsd:string"&gt;%receivedTime%&lt;/bns:receivedTime&gt;
+  &lt;bns:serviceIdentifier xsi:type="xsd:string"&gt;%serviceIdentifier%&lt;/bns:serviceIdentifier&gt;
+  &lt;bns:NAI xsi:type="xsd:string"&gt;%NAI%&lt;/bns:NAI&gt;
+  &lt;bns:currency xsi:type="xsd:string"&gt;%currency%&lt;/bns:currency&gt;
+  &lt;bns:account xsi:type="xsd:string"&gt;%account%&lt;/bns:account&gt;
+&lt;/bns:BonusRefund&gt;
+&lt;/soapEnv:Body&gt;&lt;/soapEnv:Envelope&gt;</PARAM>
+            <PARAM OID="InboxParameter55" NAME="destination" DESC="" TYPE="URI">http://localhost:18474/CustomerService.asmx</PARAM>
+            <PARAM OID="InboxParameter56" NAME="SOAPaction" DESC="" TYPE="String">http://tempuri.org/BonusRefund</PARAM>
+            <PARAM OID="InboxParameter57" NAME="timeout" DESC="" TYPE="Integer Advanced" />
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter59" NAME="error" DESC="" TYPE="String" />
+            <PARAM OID="OutboxParameter60" NAME="message" DESC="" TYPE="Text" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+    <PROGRAM OID="Program197" NAME="GetChurnScore" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter198" NAME="REGION" DESC="" TYPE="string">"GZ"</PARAM>
+        <PARAM OID="InboxParameter199" NAME="JAWWAL_MAIN_CHARGE" DESC="" TYPE="float">5</PARAM>
+        <PARAM OID="InboxParameter200" NAME="WATANIYA_MAIN_CHARGE" DESC="" TYPE="float">1.05</PARAM>
+        <PARAM OID="InboxParameter201" NAME="ONNET_TERMINATING" DESC="" TYPE="float" />
+        <PARAM OID="InboxParameter203" NAME="ISRAEL_MAIN_CHARGE" DESC="" TYPE="float">3.025</PARAM>
+        <PARAM OID="InboxParameter205" NAME="PACKAGE_Code" DESC="" TYPE="int">3</PARAM>
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter206" NAME="churnscore" DESC="" TYPE="float" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod207" NAME="HTTPAdapter" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.CT_HTTP">
+          <INBOX>
+            <PARAM OID="InboxParameter209" NAME="method" TYPE="Enum:GET,POST,PUT,DELETE,OPTIONS,HEAD">POST</PARAM>
+            <PARAM OID="InboxParameter211" NAME="urlstring" TYPE="URI">https://ussouthcentral.services.azureml.net/workspaces/a7f6e2bb07814cd99fed46a1036eb8bc/services/42562b981a9f42049e8f6deb929c868b/execute?api-version=2.0&amp;format=swagger</PARAM>
+            <PARAM OID="InboxParameter213" NAME="headin" TYPE="Text Advanced">Content-Type: application/json&#xD;
+Authorization: bearer megBhjdUinvbqXV7PvHbK5akjsXAZwuIoH0HHeOGAmeafCMWB7HwOJ5en3ARc93+QEZAWvVPKU2zs+MOSJzfwg==</PARAM>
+            <PARAM OID="InboxParameter215" NAME="body" TYPE="Text">{&#xD;
+  "Inputs": {&#xD;
+    "input1": [&#xD;
+      {&#xD;
+        "REGION": "GZ",&#xD;
+        "JAWWAL_MAIN_CHARGE": 0,&#xD;
+        "WATANIYA_MAIN_CHARGE": 0,&#xD;
+        "ONNET_TERMINATING": "",&#xD;
+        "ISRAEL_MAIN_CHARGE": 1,&#xD;
+        "PACKAGE_Code": 1&#xD;
+      }&#xD;
+    ]&#xD;
+  },&#xD;
+  "GlobalParameters": {}&#xD;
+}</PARAM>
+            <PARAM OID="InboxParameter217" NAME="user" TYPE="String Advanced" />
+            <PARAM OID="InboxParameter219" NAME="pass" TYPE="Password Advanced" />
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter221" NAME="headout" TYPE="String" />
+            <PARAM OID="OutboxParameter223" NAME="responseheaders" TYPE="Map" />
+            <PARAM OID="OutboxParameter225" NAME="page" TYPE="String" />
+            <PARAM OID="OutboxParameter227" NAME="status" TYPE="String" />
+            <PARAM OID="OutboxParameter229" NAME="errormsg" TYPE="String" />
+          </OUTBOX>
+        </METHOD>
+      </ACCESS>
+    </PROGRAM>
+    <PROGRAM OID="Program729" NAME="churnparser" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" SIZE="0" RESTART="0">
+      <INBOX>
+        <PARAM OID="InboxParameter735" NAME="page" DESC="" TYPE="String" />
+      </INBOX>
+      <OUTBOX>
+        <PARAM OID="OutboxParameter736" NAME="result" DESC="" TYPE="String" />
+        <PARAM OID="OutboxParameter773" NAME="count" DESC="" TYPE="String" />
+      </OUTBOX>
+      <ACCESS>
+        <METHOD OID="AccessMethod871" NAME="JSAdapter" DESC="" AUTHOR="" VERSION="1.0" VERSIONSTATUS="Stable" CACHELIFETIME="0" ABSTRACT="false" COMP="system.js.CT_JS">
+          <INBOX>
+            <PARAM OID="InboxParameter873" NAME="script" TYPE="Code:Java">&lt;script src="http://code.jquery.com/jquery-1.11.3.min.js"&gt;&lt;/script&gt;&#xD;
+var obj = jQuery.parseJSON( '{ "name": "John" }' );</PARAM>
+          </INBOX>
+          <OUTBOX>
+            <PARAM OID="OutboxParameter875" NAME="eval" TYPE="String" />
           </OUTBOX>
         </METHOD>
       </ACCESS>
