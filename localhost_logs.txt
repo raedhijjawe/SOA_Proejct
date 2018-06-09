@@ -1,0 +1,177 @@
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:1:promotionrate,
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:2:CreateBusnissInteractionResult,BI Created Succeffuly
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:CALLER,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:delete_on_finish,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:ENDDT,2018-06-10 01:30:54.053
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:Finalized,Yes
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:READYDT,2018-06-10 01:30:48.425
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:START,1
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:STARTDT,2018-06-10 01:30:48.425
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:STATE,4
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:SuspendAfterCreation,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].0.0:0:WALL,5.628
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:1:ISRAEL_MAIN_CHARGE,3.025
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:1:JAWWAL_MAIN_CHARGE,5
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:1:ONNET_TERMINATING,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:1:PACKAGE_Code,3
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:1:REGION,GZ
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:1:WATANIYA_MAIN_CHARGE,1.05
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:2:churnscore,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:ENDDT,2018-06-10 01:30:49.291
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:HOST,172.30.10.103
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:NAME,GetChurnScore
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:PROGNAME,{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}GetChurnScore[1.0]
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:READYDT,2018-06-10 01:30:48.425
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:RESTART,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:START,1
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:STARTDT,2018-06-10 01:30:48.425
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:STATE,4
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:TYPE,ACTY
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:0:WALL,0.866
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:4:AM,HTTPAdapter
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:4:body,{
+  "Inputs": {
+    "input1": [
+      {
+        "REGION": "GZ",
+        "JAWWAL_MAIN_CHARGE": 0,
+        "WATANIYA_MAIN_CHARGE": 0,
+        "ONNET_TERMINATING": "",
+        "ISRAEL_MAIN_CHARGE": 1,
+        "PACKAGE_Code": 1
+      }
+    ]
+  },
+  "GlobalParameters": {}
+}
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:4:headin,Content-Type: application/json
+Authorization: bearer megBhjdUinvbqXV7PvHbK5akjsXAZwuIoH0HHeOGAmeafCMWB7HwOJ5en3ARc93+QEZAWvVPKU2zs+MOSJzfwg==
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:4:method,POST
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:4:urlstring,https://ussouthcentral.services.azureml.net/workspaces/a7f6e2bb07814cd99fed46a1036eb8bc/services/42562b981a9f42049e8f6deb929c868b/execute?api-version=2.0&format=swagger
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:5:errormsg,OK
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:5:headout,null:[HTTP/1.1 200 OK]
+Server:[Microsoft-HTTPAPI/2.0]
+ETag:["3af55474bd8d4b99b35c46c5da8623f2"]
+Content-Length:[47]
+x-ms-request-id:[19e4da0b-da5b-40ad-96af-43a97ad289bd]
+x-ms-request-duration:[00:00:00.0161761]
+Date:[Sat, 09 Jun 2018 22:30:50 GMT]
+Content-Type:[application/json; format=swagger; charset=utf-8]
+
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:5:page,{"Results":{"output1":[{"Scored Labels":"5"}]}}
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:5:responseheaders,{null=[HTTP/1.1 200 OK], Server=[Microsoft-HTTPAPI/2.0], ETag=["3af55474bd8d4b99b35c46c5da8623f2"], Content-Length=[47], x-ms-request-id=[19e4da0b-da5b-40ad-96af-43a97ad289bd], x-ms-request-duration=[00:00:00.0161761], Date=[Sat, 09 Jun 2018 22:30:50 GMT], Content-Type=[application/json; format=swagger; charset=utf-8]}
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].GetChurnScore.0:5:status,200
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:account,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:amount,10
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:billingText,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:currency,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:endUserIdentifier,1
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:externalData1,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:externalData2,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:NAI,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:receivedTime,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:serviceIdentifier,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:1:TransactionID,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:2:BonusRefundResult,resp&gt;0&lt;/resp&gt;respMessage&gt;Customer refunded Successfuly&lt;/respMessage&gt;
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:ENDDT,2018-06-10 01:30:52.850
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:HOST,172.30.10.103
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:NAME,SOAP_BonusRefund
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:PROGNAME,{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}SOAP_BonusRefund[1.0]
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:READYDT,2018-06-10 01:30:49.291
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:RESTART,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:START,1
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:STARTDT,2018-06-10 01:30:49.307
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:STATE,4
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:TYPE,ACTY
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:0:WALL,3.559
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:4:AM,SOAP_BonusRefund_INVOKE
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:4:destination,http://localhost:18474/CustomerService.asmx
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:4:message,<soapEnv:Envelope xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapEnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdns0="http://tempuri.org/" xmlns:bns="http://tempuri.org/">
+<soapEnv:Body>
+    <bns:BonusRefund soapEnv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <bns:amount xsi:type="xsd:decimal">10</bns:amount>
+  <bns:endUserIdentifier xsi:type="xsd:string">1</bns:endUserIdentifier>
+  <bns:billingText xsi:type="xsd:string"></bns:billingText>
+  <bns:TransactionID xsi:type="xsd:string"></bns:TransactionID>
+  <bns:externalData1 xsi:type="xsd:string"></bns:externalData1>
+  <bns:externalData2 xsi:type="xsd:string"></bns:externalData2>
+  <bns:receivedTime xsi:type="xsd:string"></bns:receivedTime>
+  <bns:serviceIdentifier xsi:type="xsd:string"></bns:serviceIdentifier>
+  <bns:NAI xsi:type="xsd:string"></bns:NAI>
+  <bns:currency xsi:type="xsd:string"></bns:currency>
+  <bns:account xsi:type="xsd:string"></bns:account>
+</bns:BonusRefund>
+</soapEnv:Body></soapEnv:Envelope>
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:4:SOAPaction,http://tempuri.org/BonusRefund
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_BonusRefund.0:5:message,<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><BonusRefundResponse xmlns="http://tempuri.org/"><BonusRefundResult>resp&gt;0&lt;/resp&gt;respMessage&gt;Customer refunded Successfuly&lt;/respMessage&gt;</BonusRefundResult></BonusRefundResponse></soap:Body></soap:Envelope>
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:1:msisdn,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:1:note,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:2:CreateBusnissInteractionResult,BI Created Succeffuly
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:ENDDT,2018-06-10 01:30:54.053
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:HOST,172.30.10.103
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:NAME,SOAP_CreateBusnissInteraction
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:PROGNAME,{ws.C.Users.raed.hijjawe.Desktop.CRMActivityService.xml}SOAP_CreateBusnissInteraction[1.0]
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:READYDT,2018-06-10 01:30:54.053
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:RESTART,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:START,1
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:STARTDT,2018-06-10 01:30:54.053
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:STATE,4
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:TYPE,ACTY
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:0:WALL,0.0
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:4:AM,SOAP_CreateBusnissInteraction_INVOKE
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:4:destination,http://localhost:18474/CRMActivityService.asmx
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:4:message,<soapEnv:Envelope xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapEnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdns0="http://tempuri.org/" xmlns:bns="http://tempuri.org/">
+<soapEnv:Body>
+    <bns:CreateBusnissInteraction soapEnv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <bns:msisdn xsi:type="xsd:string"></bns:msisdn>
+  <bns:note xsi:type="xsd:string"></bns:note>
+</bns:CreateBusnissInteraction>
+</soapEnv:Body></soapEnv:Envelope>
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:4:SOAPaction,http://tempuri.org/CreateBusnissInteraction
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_CreateBusnissInteraction.0:5:message,<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><CreateBusnissInteractionResponse xmlns="http://tempuri.org/"><CreateBusnissInteractionResult>BI Created Succeffuly</CreateBusnissInteractionResult></CreateBusnissInteractionResponse></soap:Body></soap:Envelope>
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:account,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:amount,20
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:billingText,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:currency,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:endUserIdentifier,1
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:externalData1,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:externalData2,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:NAI,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:receivedTime,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:serviceIdentifier,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:1:TransactionID,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:2:RefundResult,resp&gt;0&lt;/resp&gt;respMessage&gt;Customer refunded Successfuly&lt;/respMessage&gt;
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:ENDDT,2018-06-10 01:30:54.053
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:HOST,172.30.10.103
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:NAME,SOAP_Refund
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:PROGNAME,{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}SOAP_Refund[1.0]
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:READYDT,2018-06-10 01:30:49.307
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:RESTART,null
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:START,1
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:STARTDT,2018-06-10 01:30:49.307
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:STATE,4
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:TYPE,ACTY
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:0:WALL,4.746
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:4:AM,SOAP_Refund_INVOKE
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:4:destination,http://localhost:18474/CustomerService.asmx
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:4:message,<soapEnv:Envelope xmlns:soapEnv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapEnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsdns0="http://tempuri.org/" xmlns:bns="http://tempuri.org/">
+<soapEnv:Body>
+    <bns:Refund soapEnv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  <bns:amount xsi:type="xsd:decimal">20</bns:amount>
+  <bns:endUserIdentifier xsi:type="xsd:string">1</bns:endUserIdentifier>
+  <bns:billingText xsi:type="xsd:string"></bns:billingText>
+  <bns:TransactionID xsi:type="xsd:string"></bns:TransactionID>
+  <bns:externalData1 xsi:type="xsd:string"></bns:externalData1>
+  <bns:externalData2 xsi:type="xsd:string"></bns:externalData2>
+  <bns:receivedTime xsi:type="xsd:string"></bns:receivedTime>
+  <bns:serviceIdentifier xsi:type="xsd:string"></bns:serviceIdentifier>
+  <bns:NAI xsi:type="xsd:string"></bns:NAI>
+  <bns:currency xsi:type="xsd:string"></bns:currency>
+  <bns:account xsi:type="xsd:string"></bns:account>
+</bns:Refund>
+</soapEnv:Body></soapEnv:Envelope>
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:4:SOAPaction,http://tempuri.org/Refund
+{ws.C.Users.raed.hijjawe.Desktop.CustomerService.xml}antichurn[1.0].SOAP_Refund.0:5:message,<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><RefundResponse xmlns="http://tempuri.org/"><RefundResult>resp&gt;0&lt;/resp&gt;respMessage&gt;Customer refunded Successfuly&lt;/respMessage&gt;</RefundResult></RefundResponse></soap:Body></soap:Envelope>
